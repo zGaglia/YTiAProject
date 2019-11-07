@@ -1,0 +1,212 @@
+<div class="container" id="azienda">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="row">
+            <div class="col">
+                <div class="col-md-auto mb-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                <i class="fas fa-building"></i>
+                            </span>
+                        </div>
+                        <input type="text" formControlName="societa" class="form-control" id="textsocieta" placeholder="Società">                    
+                        <div class="invalid-tooltip">
+                        Please choose a unique and valid username.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>        
+                <div class="row">
+                    <div class="col">
+                        <div class="col-md-auto mb-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                        <i class="fas fa-file-alt"></i>
+                                    </span>
+                                </div>
+                                <input type="text" formControlName="pIva" class="form-control" id="textcodfisc" placeholder="P. Iva" title="Solo 11 cifre.">                    
+                                <div class="invalid-tooltip">
+                                Please choose a unique and valid username.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                            <div class="col-md-auto mb-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" formControlName="telefono" class="form-control" id="texttelefono" placeholder="Telefono">                    
+                                    <div class="invalid-tooltip">
+                                    Please choose a unique and valid username.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                                <div class="col-md-auto mb-3">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                    <b>CAP</b>
+                                                </span>
+                                            </div>
+                                            <input type="text" formControlName="cap" class="form-control" id="textcap" placeholder="CAP">                    
+                                            <div class="invalid-tooltip">
+                                            Please choose a unique and valid username.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                        </div>
+                        <div class="col-6">
+                                <div class="col-md-auto mb-3">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" formControlName="indirizzo" class="form-control" id="textindirizzo" placeholder="Indirizzo Fatturazione">                    
+                                            <div class="invalid-tooltip">
+                                            Please choose a unique and valid username.
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                        </div>
+                        <div class="col-2">
+                                <div class="col-md-auto mb-3">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                    <b>N°</b>
+                                                </span>
+                                            </div>
+                                            <input type="text" formControlName="n" class="form-control" id="textnumer" placeholder="">                    
+                                            <div class="invalid-tooltip">
+                                            Please choose a unique and valid username.
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="custom-control mb-3">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" (change)="check()" id="customSwitch1" value="true">
+                            <label class="custom-control-label" for="customSwitch1">Indirizzo di spedizione diverso da quello di fatturazione?</label>
+                           
+                          </div>
+                        </div>
+                    </div>
+                    <div *ngIf="checked" class="row">
+
+                            <div class="row">
+                                    <div class="col-4">
+                                            <div class="col-md-auto mb-3">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                                <b>CAP</b>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" formControlName="cap1Spedizione" class="form-control" id="textcapS" placeholder="CAP">                    
+                                                        <div class="invalid-tooltip">
+                                                        Please choose a unique and valid username.
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                    </div>
+                                    <div class="col-6">
+                                            <div class="col-md-auto mb-3">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                                <i class="fas fa-map-marker-alt"></i>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" formControlName="indirizzo1Spedizione" class="form-control" id="textindirizzoS" placeholder="Indirizzo Spedizione">                    
+                                                        <div class="invalid-tooltip">
+                                                        Please choose a unique and valid username.
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                    </div>
+                                    <div class="col-2">
+                                            <div class="col-md-auto mb-3">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                                <b>N°</b>
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" formControlName="n1Spedizione" class="form-control" id="textnumerS" placeholder="">                    
+                                                        <div class="invalid-tooltip">
+                                                        Please choose a unique and valid username.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        
+                                    </div>
+                                </div>
+
+                    </div>
+
+                    <div class="row">
+                    <div class="col">
+                            <div class="col-md-auto mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                <i class="fas fa-at"></i>
+                                            </span>
+                                        </div>
+                                        <input type="email" formControlName="email" class="form-control" id="textemail" placeholder="Email">                    
+                                        <div class="invalid-tooltip">
+                                        Please choose a unique and valid username.
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <div class="col">
+                            <div class="col-md-auto mb-3">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="validationTooltipUsernamePrepend">
+                                                <i class="fas fa-key"></i>
+                                            </span>
+                                        </div>                                        
+                                        <input type="password" formControlName="psw" class="form-control" id="psw1" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Numero, lettera maiuscola, minuscola e almeno 8 caratteri." required placeholder="Password">         
+
+                                        <div class="col-md-auto mb-3">
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                    <label for="mostra"><input type="checkbox" id="mostra" (click)="mostra1()">Mostra</label> 
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="invalid-tooltip">
+                                        Please choose a unique and valid username.
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+
+                    </div>
+                    <div class="row">
+                        <label for="newsletter"><input type="checkbox"> Iscriviti alla nostra Newsletter!</label>                        
+                    </div>
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Registrati</button>
+                    <button type="submit" class="btn btn-primary" (click)="togglePass('changepassword')">Change Password</button>
+        
