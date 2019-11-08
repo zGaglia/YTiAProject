@@ -1,9 +1,13 @@
 <div class="container" id=navbar>
-<nav class="navbar navbar-dark bg-primary">
-        <a (click)="toggleEditor('index')"><b>Home</b></a>
-        <a (click)="toggleEditor('privato')"><b>Privato</b></a>
-        <a (click)="toggleEditor('azienda')"><b>Azienda</b></a>
-</nav>
+
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" (click)="toggleEditor('index')"><b>Home</b></a>
+                <a class="dropdown-item" (click)="toggleEditor('privato')"><b>Privato</b></a>
+                <a class="dropdown-item" (click)="toggleEditor('azienda')"><b>Azienda</b></a>
+              </div>
 </div>
 
 <router-outlet></router-outlet>
