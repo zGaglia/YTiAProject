@@ -59,7 +59,7 @@
                                                     <b>CAP</b>
                                                 </span>
                                             </div>
-                                            <input type="text" formControlName="cap" class="form-control" id="textcap" placeholder="CAP">                    
+                                            <input type="text" formControlName="cap" class="form-control" id="textcap" placeholder="CAP" required>                    
                                             <div class="invalid-tooltip">
                                             Please choose a unique and valid username.
                                             </div>
@@ -91,7 +91,7 @@
                                                     <b>N°</b>
                                                 </span>
                                             </div>
-                                            <input type="text" formControlName="n" class="form-control" id="textnumer" placeholder="">                    
+                                            <input type="text" formControlName="n" class="form-control" id="textnumer" placeholder="" required>                    
                                             <div class="invalid-tooltip">
                                             Please choose a unique and valid username.
                                             </div>
@@ -100,6 +100,7 @@
                             
                         </div>
                     </div>
+                    <div class="container">                    
                     <div class="row">
                         <div class="custom-control mb-3">
                         <div class="custom-control custom-switch">
@@ -109,8 +110,10 @@
                           </div>
                         </div>
                     </div>
-                    <div *ngIf="checked" class="row">
-
+                </div>
+               
+                    <div *ngIf="checked" class="row" [@transitionTest]=currentState>
+                        <div class="container">
                             <div class="row">
                                     <div class="col-4">
                                             <div class="col-md-auto mb-3">
@@ -162,7 +165,7 @@
                                 </div>
 
                     </div>
-
+                </div>
                     <div class="row">
                     <div class="col">
                             <div class="col-md-auto mb-3">
