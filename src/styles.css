@@ -1,5 +1,5 @@
 body {
-    padding: 50px;
+    padding: 30px;
 }
 
 #svg {
@@ -40,3 +40,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         border-radius: .25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
+        .navbar {
+            margin: 5px;
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            padding: .5rem 1rem;
+            border-radius: .25rem;
+            }
