@@ -11,6 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CambiaPasswordComponent } from './cambia-password/cambia-password.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
 
@@ -38,7 +39,8 @@ const routes: Routes = [
     FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule
   ],
 
   providers: [RichiestaService],
