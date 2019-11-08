@@ -7,7 +7,7 @@ body {
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
 .input-group-text {
     display: -ms-flexbox;
     display: flex;
@@ -41,6 +41,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
         .navbar {
+            font-display: "";
             font-family: bold;
             color: #fff;
             margin: 5px;
@@ -63,4 +64,10 @@ input[type=checkbox], input[type=radio] {
     box-sizing: border-box;
     padding: 0;
     margin: 5px;
+    }
+
+    a:not([href]):not([tabindex]){
+        font-family: sans-serif;
+        
+        
     }
