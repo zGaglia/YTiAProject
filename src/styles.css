@@ -56,3 +56,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 5px;
+    }

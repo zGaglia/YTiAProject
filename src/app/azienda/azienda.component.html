@@ -186,16 +186,10 @@
                                             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                                                 <i class="fas fa-key"></i>
                                             </span>
-                                        </div>                                        
-                                        <input type="password" formControlName="psw" class="form-control" id="psw1" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Numero, lettera maiuscola, minuscola e almeno 8 caratteri." required placeholder="Password">         
-
-                                        <div class="col-md-auto mb-3">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                    <label for="mostra"><input type="checkbox" id="mostra" (click)="mostra1()">Mostra</label> 
-                                                    </div>
-                                                </div>
-                                        </div>
+                                        </div>                                       
+                                            <input type="password" formControlName="psw" class="form-control" id="psw1" name="psw" title="Numero, lettera maiuscola, minuscola e almeno 8 caratteri." required placeholder="Password">
+                                            <label for="mostra"><input type="checkbox" id="mostra" (click)="mostra1()">Mostra</label>
+                                                
                                         <div class="invalid-tooltip">
                                         Please choose a unique and valid username.
                                         </div>
