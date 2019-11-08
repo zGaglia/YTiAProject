@@ -3,16 +3,26 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { valori1 } from '../valori1';
 import { RichiestaService } from '../richiesta.service';
 import { AppComponent } from '../app.component';
+import { trigger, state, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-azienda',
   templateUrl: './azienda.component.html',
-  styleUrls: ['./azienda.component.css']
+  styleUrls: ['./azienda.component.css'],
+  animations: [
+    trigger('transitionTest', [
+      state('void', style({
+        transition : 0.4,
+        opacity: 0
+      })),
+      transition('void <=> *', animate(1000)),
+    ]),
+  ]
 })
 export class AziendaComponent implements OnInit {
 
   constructor(private fb:FormBuilder, private appObj:AppComponent, private rich1:RichiestaService) { }
-
+  currentState: boolean = true;
   show = false;
   checked = false;
 

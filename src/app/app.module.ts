@@ -13,6 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CambiaPasswordComponent } from './cambia-password/cambia-password.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 const routes: Routes = [
 
   { path: 'privato', component: FormComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     FontAwesomeModule,
     ReactiveFormsModule,

@@ -3,11 +3,22 @@ import {FormBuilder, Validators} from '@angular/forms'
 import { Valori } from '../valori';
 import { RichiestaService } from '../richiesta.service';
 import { AppComponent } from '../app.component';
+import { trigger, state, transition, style, animate } from '@angular/animations';
+
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  styleUrls: ['./form.component.css'],
+  animations: [
+    trigger('transitionTest', [
+      state('void', style({
+        transition : 0.4,
+        opacity: 0
+      })),
+      transition('void <=> *', animate(1000)),
+    ]),
+  ]
 })
 export class FormComponent implements OnInit { 
 
@@ -15,7 +26,7 @@ export class FormComponent implements OnInit {
 
   show = false;
   checked = false;
-
+  currentState: boolean = true;
   check(){
     this.checked = !this.checked;
   }

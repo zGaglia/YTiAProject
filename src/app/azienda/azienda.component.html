@@ -1,4 +1,4 @@
-<div class="container" id="azienda">
+<div class="container" id="azienda"  [@transitionTest]=currentState>
         <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="row">
             <div class="col">
@@ -209,4 +209,5 @@
                     </div>
                     <button type="submit" class="btn btn-outline-primary " [disabled]="form.invalid">Registrati</button>
                     <button type="submit" class="btn btn-outline-primary " (click)="togglePass('changepassword')">Change Password</button>
-        
+            </form>
+    </div>

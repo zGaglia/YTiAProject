@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, PatternValidator } from '@angular/forms';
 import { RichiestaService } from '../richiesta.service';
+import { trigger, state, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-cambia-password',
   templateUrl: './cambia-password.component.html',
-  styleUrls: ['./cambia-password.component.css']
+  styleUrls: ['./cambia-password.component.css'],
+  animations: [
+    trigger('transitionTest', [
+      state('void', style({
+        transition : 0.4,
+        opacity: 0
+      })),
+      transition('void <=> *', animate(1000)),
+    ]),
+  ]
 })
 export class CambiaPasswordComponent implements OnInit {
 
   constructor(private fB: FormBuilder,private serv:RichiestaService) { }
+  currentState: boolean = true;
 
   ngOnInit() {
   }
