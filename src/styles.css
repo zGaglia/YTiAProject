@@ -18,10 +18,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #007bff;
+    color: #ffffff;
     text-align: center;
     white-space: nowrap;
-    background-color: #ffffff;
+    background-color: #007bff;
     border: 1px solid #007bff;
     border-radius: .25rem;
     }
@@ -41,6 +41,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
         .navbar {
+            font-family: bold;
+            color: #fff;
             margin: 5px;
             position: relative;
             display: -ms-flexbox;
@@ -51,7 +53,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             align-items: center;
             -ms-flex-pack: justify;
             justify-content: space-between;
-            padding: .5rem 1rem;
+            padding: .5rem 3rem;
             border-radius: .25rem;
             }
 html, body { height: 100%; }
