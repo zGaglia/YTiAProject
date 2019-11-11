@@ -50,6 +50,7 @@ export class CambiaPasswordComponent implements OnInit {
 
   comparePassNew: boolean = false;
   comparePassEsistente: boolean = false;
+  differentInputs: boolean = false;
 
   comparePass2(){
     if(this.form2.get('psw2').value){
@@ -64,7 +65,19 @@ export class CambiaPasswordComponent implements OnInit {
     else{
       this.comparePassNew = false;
     }
+
     return this.comparePassNew;
+  }
+
+
+  verifyIfPassDifferent(){
+    if(this.form2.get('psw1').value){
+      var oldPassToCheck = this.form2.get('psw1').value;
+    }
+    if(this.form2.get('psw2').value){
+      var newPassToCheck = this.form2.get('psw2').value;
+    }
+    return (oldPassToCheck!=newPassToCheck) ? true : false;
   }
 
   comparePass1(){
@@ -78,7 +91,7 @@ export class CambiaPasswordComponent implements OnInit {
     }else{
       this.comparePassEsistente = false;
     }
-    return this.comparePassEsistente;
+    return this.comparePassEsistente;//return true if passwords are the same
   }
 
   cambiaPassword(){
