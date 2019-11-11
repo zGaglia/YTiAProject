@@ -11,6 +11,7 @@ import { AppComponent } from '../app.component';
   animations: [
     trigger('transitionTest', [
       state('void', style({
+        transform: 'translateY(-75%)',
         transition : 0.4,
         opacity: 0
       })),
