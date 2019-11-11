@@ -12,6 +12,7 @@ import { MainComponent } from './main/main.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CambiaPasswordComponent } from './cambia-password/cambia-password.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfermaCambiaPassComponent } from './conferma-cambia-pass/conferma-cambia-pass.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'privato', component: FormComponent },
   { path: 'azienda', component: AziendaComponent },
   { path: 'index',component: MainComponent},
+  { path: 'passwordChanged', component: ConfermaCambiaPassComponent },
   { path: 'changepassword', component: CambiaPasswordComponent},
   { path: '', redirectTo: "index", pathMatch: "full"},
   { path: '**', component: NotFoundComponent}
@@ -32,7 +34,8 @@ const routes: Routes = [
     AziendaComponent,
     MainComponent,
     NotFoundComponent,
-    CambiaPasswordComponent
+    CambiaPasswordComponent,
+    ConfermaCambiaPassComponent
   ],
   imports: [
     BrowserModule,

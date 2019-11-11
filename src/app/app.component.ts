@@ -3,7 +3,7 @@ import {Router} from '@angular/router';
 
 
 
-export type EditorType = 'privato' | 'azienda' | 'changepassword';
+export type EditorType = 'privato' | 'azienda' | 'changepassword' | 'passwordChanged';
 
 @Component({
   selector: 'app-root',

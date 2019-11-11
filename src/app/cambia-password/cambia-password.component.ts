@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, PatternValidator } from '@angular/forms';
 import { RichiestaService } from '../richiesta.service';
 import { trigger, state, transition, style, animate } from '@angular/animations';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-cambia-password',
@@ -19,7 +20,7 @@ import { trigger, state, transition, style, animate } from '@angular/animations'
 })
 export class CambiaPasswordComponent implements OnInit {
 
-  constructor(private fB: FormBuilder,private serv:RichiestaService) { }
+  constructor(private fB: FormBuilder,private serv:RichiestaService, private appObj : AppComponent) { }
   currentState: boolean = true;
 
   ngOnInit() {
@@ -92,6 +93,7 @@ export class CambiaPasswordComponent implements OnInit {
     
     localStorage.setItem(this.form2.get('email').value, JSON.stringify(localPasswordStorage));
     console.log("Password changed!");
+    this.appObj.toggleEditor('passwordChanged');
   }
 
   show1 = false;

@@ -1,0 +1,13 @@
+.container{
+    text-align: center;
+    width: 100%;
+    height: auto;;
+}
+
+.container img{
+    border-radius: 40%;
+}
+
+.container button{
+    margin-top: 3cm;
+}
