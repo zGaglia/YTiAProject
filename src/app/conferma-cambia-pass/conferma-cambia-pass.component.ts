@@ -9,7 +9,6 @@ import { trigger, state, transition, style, animate } from '@angular/animations'
   animations: [
     trigger('transitionTest', [
       state('void', style({
-        transform: 'translateY(-75%)',
         transition : 0.4,
         opacity: 0
       })),
