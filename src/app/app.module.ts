@@ -13,7 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CambiaPasswordComponent } from './cambia-password/cambia-password.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfermaCambiaPassComponent } from './conferma-cambia-pass/conferma-cambia-pass.component';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 const routes: Routes = [
 
@@ -45,7 +45,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
 
   providers: [RichiestaService],

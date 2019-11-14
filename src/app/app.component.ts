@@ -16,6 +16,8 @@ export type EditorType = 'privato' | 'azienda' | 'changepassword' | 'passwordCha
 
 export class AppComponent {
 
+  showFiller = false;
+
   constructor(private router:Router){}
   
   toggleEditor(type:string){

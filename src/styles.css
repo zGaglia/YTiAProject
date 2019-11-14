@@ -41,18 +41,3 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         border-radius: .25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
-       
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-input[type=checkbox], input[type=radio] {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 5px;
-    }
-
-    a:not([href]):not([tabindex]){
-        font-family: sans-serif;
-     }
-
-   
