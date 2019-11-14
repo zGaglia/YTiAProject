@@ -79,9 +79,9 @@ export class CambiaPasswordComponent implements OnInit {
       var newPassToCheck = this.form2.get('psw2').value;
     }
     else
-    {return true;//same password
+    {return true;
     }
-    return (oldPassToCheck!=newPassToCheck) ? true : false;
+    this.differentInputs = (oldPassToCheck!=newPassToCheck) ? true : false;
   }
 
   comparePass1(){
