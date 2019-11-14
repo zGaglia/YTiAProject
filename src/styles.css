@@ -1,6 +1,7 @@
 body {
     padding: 30px;
     color: #007bff;
+    transition: background-color .5s;
 }
 
 #svg {

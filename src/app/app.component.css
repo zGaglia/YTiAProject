@@ -1,0 +1,36 @@
+.example-container {
+    width: auto;
+    height: 100%;
+    background-color: #111;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: 0.5s;
+    font-size: 30px;
+    transition: 1000ms;
+}
+
+.example-container p{
+    display: inline;
+    padding : 8px;
+    transition: 0.3s;
+    color: rgb(193, 207, 219);
+}
+
+.icon-column i{
+    display: relative;
+    text-align: center;
+    padding-top: 60px;
+    display: block;
+    padding : 10px 10px 10px 32px;
+    transition: 0.3s;
+    color: rgb(193, 207, 219);
+}
+
+.example-container i:hover{
+    color: #007bff;
+}
+
+.example-container p:hover{
+    color: #007bff;
+}

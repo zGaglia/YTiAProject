@@ -10,10 +10,7 @@
                 <a class="dropdown-item" (click)="toggleEditor('azienda')"><b>Azienda</b></a>
               </div>
 </div>
--->
-
-<mat-drawer-container class="example-container">
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+<mat-drawer #drawer class="example-sidenav" mode="side">
     <a (click)="toggleEditor('index')">Home<br></a>
     <a (click)="toggleEditor('privato')">Privato<br></a>
     <a (click)="toggleEditor('azienda')">Azienda</a>
@@ -25,6 +22,27 @@
     </button>
   </div>
 
+-->
+      
+<mat-drawer-container class="example-container">
+  <div class="icon-column">
+      <i class="fas fa-bars" (click)="toggleSideNav()"></i>
+      <i class="fas fa-user">
+          <p *ngIf='showFiller' (click)="toggleEditor('privato')">Privato</p>
+      </i>
+      <i class="fas fa-building">
+          <p *ngIf='showFiller' (click)="toggleEditor('azienda')">Azienda</p>
+      </i>
+      <i class="fas fa-home">
+          <p *ngIf='showFiller' (click)="toggleEditor('index')">Home</p>
+      </i>
+      <i class="fas fa-unlock">
+          <p *ngIf='showFiller' (click)="toggleEditor('changepassword')">Cambia Password</p>
+      </i>
+  </div>
+
 </mat-drawer-container>
-<router-outlet></router-outlet>
+
+
+<router-outlet class="main"></router-outlet>
 

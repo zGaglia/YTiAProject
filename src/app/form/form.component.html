@@ -1,5 +1,5 @@
 <div class="container" id="privato"  [@transitionTest]=currentState>
-<form [formGroup]="form1" (ngSubmit)="submit()">
+<form [formGroup]="form1" (ngSubmit)="submit()" class="form">
     
     <div class="row">
         <div class="col">
@@ -32,7 +32,8 @@
                     </div>
                 </div>
             </div>
-        </div>        
+    </div> 
+           
             <div class="row">
                 <div class="col">
                     <div class="col-md-auto mb-3">
