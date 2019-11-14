@@ -7,11 +7,13 @@ body {
     width: 30px;
 }
 
+
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
 .input-group-text {
     display: -ms-flexbox;
     display: flex;
+    flex-direction: colum;
     -ms-flex-align: center;
     align-items: center;
     padding: .375rem .75rem;
@@ -27,7 +29,8 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     border-radius: .25rem;
     }
     .form-control {
-        display: block;
+        display: flex;
+        flex-direction: colum;
         width: 100%;
         height: calc(1.5em + .75rem + 2px);
         padding: .375rem .75rem;
@@ -41,3 +44,7 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         border-radius: .25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
+  .input-group{
+    margin: 4px 0;
+    width: 400px;
+  }

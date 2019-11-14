@@ -14,7 +14,7 @@ import { CambiaPasswordComponent } from './cambia-password/cambia-password.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfermaCambiaPassComponent } from './conferma-cambia-pass/conferma-cambia-pass.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 const routes: Routes = [
 
   { path: 'privato', component: FormComponent },
@@ -46,7 +46,8 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    NgbModule
   ],
 
   providers: [RichiestaService],
