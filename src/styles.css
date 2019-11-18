@@ -32,7 +32,7 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     border-radius: .25rem;
     
     }
-    .form-control {
+.form-control {
         display: flex;
         flex-direction: colum;
         width: 100%;
@@ -47,8 +47,7 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         border: 1px solid #a1a1a186;
         border-radius: .25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-        
-        }
+    }
   .input-group{
     margin: 4px 0;
     width: 400px;
@@ -65,8 +64,11 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     }
     .btn-outline-primary :hover{
         color: white;
+<<<<<<< HEAD
     } 
     .container{
         width: 50%;
         height: 50%;
+=======
+>>>>>>> e653ae14a9f31f7adec1a102f1fc1dcc1379bf39
     }

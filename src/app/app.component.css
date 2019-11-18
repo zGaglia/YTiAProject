@@ -10,6 +10,10 @@
     transition: 1000ms;
 }
 
+.icon-column i{
+    padding-bottom: 25px;
+}
+
 .example-container p{
     font-family: 'Roboto', "Helvetica Neue", sans-serif;
     font-size: 20px;
@@ -18,6 +22,17 @@
     transition: 0.3s;
     color: rgb(252, 252, 252);
 }
+#menu-icon{
+    padding-bottom: 30px;
+}
+
+#home-icon{
+    padding-bottom: 30px;
+}
+
+#pass-icon{
+    padding-top: 378px;
+}
 
 .icon-column i{
     display: relative;
@@ -25,6 +40,7 @@
     padding-top: 60px;
     display: block;
     padding : 10px 10px 10px 32px;
+    padding-bottom: 30px;
     transition: 0.3s;
     color: rgb(252, 252, 252);
 }
@@ -35,4 +51,8 @@
 
 .example-container p:hover{
     color: #007bff;
+}
+
+.root-container{
+    justify-content: center;
 }
