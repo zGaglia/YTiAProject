@@ -64,11 +64,8 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     }
     .btn-outline-primary :hover{
         color: white;
-<<<<<<< HEAD
     } 
     .container{
         width: 50%;
         height: 50%;
-=======
->>>>>>> e653ae14a9f31f7adec1a102f1fc1dcc1379bf39
     }
