@@ -28,7 +28,11 @@
 }
 
 #pass-icon{
-    padding-top: 378px;
+    bottom: 0;
+    position: absolute;
+}
+#pass-icon p{
+    display: inline-block;
 }
 
 .icon-column i{
