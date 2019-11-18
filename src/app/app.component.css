@@ -1,7 +1,7 @@
 .example-container {
     width: auto;
     height: 100%;
-    background-color: #505050;
+    background-color: #a1a1a186;
     top: 0;
     left: 0;
     position: fixed;
@@ -11,6 +11,8 @@
 }
 
 .example-container p{
+    font-family: 'Roboto', "Helvetica Neue", sans-serif;
+    font-size: 20px;
     display: inline;
     padding : 8px;
     transition: 0.3s;

@@ -3,6 +3,7 @@ body {
     color: #f8f8f8;
     transition: background-color .5s;
     background-color:#1d1c1c !important;
+
 }
 
 #svg {
@@ -24,11 +25,12 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     font-weight: 400;
     line-height: 1.5;
     color: #ffffff;
-    text-align: center;
+    
     white-space: nowrap;
-    background-color: #007bff;
-    border: 1px solid #007bff;
+    background-color: #a1a1a186;
+    border: 1px solid #a1a1a186;
     border-radius: .25rem;
+    
     }
     .form-control {
         display: flex;
@@ -42,9 +44,10 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         color: #000000;
         background-color:white;
         background-clip: padding-box;
-        border: 1px solid #007bff;
+        border: 1px solid #a1a1a186;
         border-radius: .25rem;
         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        
         }
   .input-group{
     margin: 4px 0;
@@ -63,3 +66,8 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     .btn-outline-primary :hover{
         color: white;
     } 
+    .container{
+
+        width: 50%;
+        height: 50%;
+    }
