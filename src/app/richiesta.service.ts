@@ -17,7 +17,7 @@ const httpOptions = {
 })
 
 export class RichiestaService {
-  ApiUrl = 'asasdasdasd';  
+  ApiUrl = 'http://localhost:3000/employees';  
   
 
   constructor(private http: HttpClient) {
@@ -32,7 +32,7 @@ export class RichiestaService {
     this.http.post<valori1>(this.ApiUrl, val1).subscribe();
     localStorage.setItem(val1.email1,JSON.stringify(val1))
   }
-
+ 
   getData(key:string){
     return JSON.parse(localStorage.getItem(key))
   }

@@ -102,28 +102,21 @@
                         <i class="fas fa-key"></i>
                     </span>
                 </div>                                       
-                    <input type="password" formControlName="psw" class="form-control" id="psw1" name="psw" title="Numero, lettera maiuscola, minuscola e almeno 8 caratteri." required placeholder="Password">
+                    <input type="password" formControlName="psw" class="form-control" id="psw1" name="psw" title="numero, lettera maiuscola e minuscola,e un simbolo tra (*@_\#$%!<>) almeno 8 caratteri" required placeholder="Password">
                     <label for="mostra"><input type="checkbox" id="mostra" (click)="mostra1()">Mostra</label>
             </div>
-                              
-                
-
-                    
-                  
-                        <div class="row">
-                            <div class="col">                        
-                            <label for="newsletter"><input type="checkbox"> Iscriviti alla nostra Newsletter!</label>
-                        </div>    
-                        </div>                        
+            <div class="row">
+                <div class="col">                        
+                    <label for="newsletter"><input type="checkbox"> Iscriviti alla nostra Newsletter!</label>
+                </div>    
+            </div>                        
                  
-                    <div class="container">
-                    <div class=row>
-                        <div class="col">
+            <div class="container">
+                <div class=row>
+                    <div class="col">
                         <button type="submit" class="btn btn-outline-primary " [disabled]="form.invalid">Registrati</button>
-                        </div>
-                    
-                        </div>    
                     </div>
-                
-            </form>
-    </div>
+                </div>    
+            </div>
+    </form>
+</div>

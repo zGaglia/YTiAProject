@@ -1,6 +1,8 @@
 body {
     padding: 30px;
-    color: #007bff;
+    color: #f8f8f8;
+    transition: background-color .5s;
+    background-color:#1d1c1c !important;
 }
 
 #svg {
@@ -37,8 +39,8 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.5;
-        color: #007bff;
-        background-color: #fff;
+        color: #000000;
+        background-color:white;
         background-clip: padding-box;
         border: 1px solid #007bff;
         border-radius: .25rem;
@@ -48,3 +50,16 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     margin: 4px 0;
     width: 400px;
   }
+ 
+  .btn-outline-primary {
+    color: white;
+    border-color: white;
+    }
+    .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+        color: white;
+        background-color: transparent;
+        
+    }
+    .btn-outline-primary :hover{
+        color: white;
+    } 
