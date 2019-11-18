@@ -2,8 +2,7 @@ body {
     padding: 30px;
     color: #f8f8f8;
     transition: background-color .5s;
-    background-color:#1d1c1c !important;
-
+    background-image: url("assets/Protruding-Squares.svg") !important;
 }
 
 #svg {
