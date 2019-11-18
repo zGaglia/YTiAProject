@@ -71,3 +71,14 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         width: 50%;
         height: 50%;
     }
+
+    .titolo{
+        font-size: 35px;
+        font-family: 'Roboto', "Helvetica Neue", sans-serif;
+        padding-bottom: 35px;
+    }
+
+    #titolo{
+        font-size: 35px;
+        padding-bottom: 35px;
+    }

@@ -1,29 +1,4 @@
-<!--
-<div class="container" id=navbar>
-
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <img src="./assets/menu.jpeg" alt="menu" height="40px" width="40px" >
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" (click)="toggleEditor('index')"><b>Home</b></a>
-                <a class="dropdown-item" (click)="toggleEditor('privato')"><b>Privato</b></a>
-                <a class="dropdown-item" (click)="toggleEditor('azienda')"><b>Azienda</b></a>
-              </div>
-</div>
-<mat-drawer #drawer class="example-sidenav" mode="side">
-    <a (click)="toggleEditor('index')">Home<br></a>
-    <a (click)="toggleEditor('privato')">Privato<br></a>
-    <a (click)="toggleEditor('azienda')">Azienda</a>
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      <img src="./assets/menu.jpeg" alt="menu" height="40px" width="40px" >
-    </button>
-  </div>
-
--->
-      
+     
 <mat-drawer-container class="example-container">
   <div class="icon-column">
       <i class="fas fa-bars" (click)="toggleSideNav()"></i>
