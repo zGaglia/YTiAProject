@@ -81,7 +81,7 @@ export class AziendaComponent implements OnInit {
     
      console.log(this.rich1.getData(Valori1.email1))
      this.rich1.postServer1(Valori1);
-    
+     this.appObj.registrationComplete();    
    }
 
 

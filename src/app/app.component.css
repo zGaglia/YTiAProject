@@ -10,6 +10,17 @@
     transition: 1000ms;
 }
 
+.registrationSidenav{
+    height: auto; /* 100% Full-height */
+    width: auto;
+    position: absolute;
+    right: 45%;
+    bottom: 0; /* Stay at the bottom */
+    background-color: #111; /* Black*/
+    overflow-y: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
 
 .example-container p{
     font-family: 'Roboto', "Helvetica Neue", sans-serif;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 
 
@@ -8,52 +9,42 @@ export type EditorType = 'privato' | 'azienda' | 'changepassword' | 'passwordCha
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-  
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('timedAnimation',[
+      state('void', style({
+        transform: 'translateY(75%)',
+        transition: 0.4,
+        opacity: 0,
+      })),
+      transition('void <=> *', animate(750)),
+    ]),
+  ]
 })
 
 
 
 export class AppComponent {
 
-  showFiller = false;
+  showFiller: boolean = false;
+  confirmRegistration: boolean = false;
 
   constructor(private router:Router){}
   
   toggleEditor(type:string){
     this.router.navigateByUrl(type);
     this.toggleSideNav();
+    if(this.confirmRegistration){
+      this.confirmRegistration = !(this.confirmRegistration)
+    }
   }
 
   toggleSideNav(){
     this.showFiller = !(this.showFiller)
-    if(this.showFiller){
-      document.body.style.backgroundColor = "rgba(0,0,0,0.1)";
-      var itemsSideNav:any = document.getElementsByClassName('example-container');
-          for (let i = 0; i < itemsSideNav.length; i++) {
-              let element = itemsSideNav[i];
-              element.style.width = 'auto';
-          }
-      var itemsMain:any = document.getElementsByClassName('main');
-        for (let i = 0; i < itemsMain.length; i++) {
-            let element = itemsMain[i];
-            element.style.marginLeft = 'auto';
-        } 
-    }
-  if(!this.showFiller){
-    var itemsSideNav:any = document.getElementsByClassName('example-container');
-          for (let i = 0; i < itemsSideNav.length; i++) {
-              let element = itemsSideNav[i];
-              element.style.width = 'auto';
-          }
-      var itemsMain:any = document.getElementsByClassName('main');
-        for (let i = 0; i < itemsMain.length; i++) {
-            let element = itemsMain[i];
-            element.style.marginLeft = 'auto';
-        } 
-      document.body.style.backgroundColor = "white";
   }
 
+  registrationComplete(){
+    this.confirmRegistration = !(this.confirmRegistration)
   }
 
 }

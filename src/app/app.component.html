@@ -22,5 +22,11 @@
         <router-outlet></router-outlet>
     </div>
 
+    <mat-drawer-container class="registrationSidenav" *ngIf=confirmRegistration [@timedAnimation]=confirmRegistration>
+        <div class="alert alert-success" role="alert">
+            <strong>Registrazione completa!</strong>
+        </div>
+    </mat-drawer-container>
+
 
 </div>

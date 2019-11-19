@@ -68,7 +68,7 @@ export class FormComponent implements OnInit {
   ngOnInit() {
   }
   submit(){
-   var valori = new Valori();
+    var valori = new Valori();
     valori.nome = this.form1.get("nome").value;
     valori.cognome = this.form1.get("cognome").value;
     valori.cf = this.form1.get("cf").value;
@@ -85,9 +85,8 @@ export class FormComponent implements OnInit {
    if(this.rich.getData(valori.email)!=null){
      return
    }
-   
     this.rich.postServer(valori);
-  
+    this.appObj.registrationComplete();
   }
   
    
