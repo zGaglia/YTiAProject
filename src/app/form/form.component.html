@@ -124,7 +124,7 @@
             <mat-pass-toggle-visibility #togglePrivatoPass></mat-pass-toggle-visibility>
     </div>
 
-        <label for="newsletter"><input type="checkbox"> Iscriviti alla nostra Newsletter!</label>
+        <label for="newsletter"><input type="checkbox" formControlName="newsletter" (click)="toggleNewsletter()"> Iscriviti alla nostra Newsletter!</label>
 
         <div class="container">
             <button type="submit" class="btn btn-outline-light" [disabled]="form1.invalid">Registrati <i class="fab fa-telegram-plane"></i></button>

@@ -27,6 +27,7 @@ export class FormComponent implements OnInit {
 
   show = false;
   checked = false;
+  newsCheck: boolean = false;
   currentState: boolean = true;
   check(){
     this.checked = !this.checked;
@@ -61,8 +62,8 @@ export class FormComponent implements OnInit {
     psw:["",[Validators.required,Validators.pattern("((?=.*\\d)(?=.*[a-z])(?=(.*[*@_\\#$%!<>]))(?=.*[A-Z]).{8,15})")]],
     capSpedizione:['',''],
     indirizzoSpedizione:['',''],
-    nSpedizione:['','']
-
+    nSpedizione:['',''],
+    newsletter:['','']
   })
 
   ngOnInit() {
@@ -81,6 +82,7 @@ export class FormComponent implements OnInit {
     valori.capSpedizione = this.form1.get("capSpedizione").value;
     valori.indirizzoSpedizione = this.form1.get("indirizzoSpedizione").value;
     valori.nSpedizione = this.form1.get("nSpedizione").value;
+    valori.newsletter = this.newsCheck;
 
    if(this.rich.getData(valori.email)!=localStorage.getItem(valori.email)){
     this.appObj.emailDuplicateError(); 
@@ -88,6 +90,10 @@ export class FormComponent implements OnInit {
    }
     this.rich.postServer(valori);
     this.appObj.registrationComplete();
+  }
+
+  toggleNewsletter(){
+    this.newsCheck = !(this.newsCheck)
   }
   
    

@@ -26,6 +26,8 @@ export class AziendaComponent implements OnInit {
   currentState: boolean = true;
   show = false;
   checked = false;
+  newsCheck1: boolean = false;
+
 
   check(){
     this.checked = !this.checked;
@@ -59,7 +61,8 @@ export class AziendaComponent implements OnInit {
     psw:["",[Validators.required,Validators.pattern("((?=.*\\d)(?=.*[a-z])(?=(.*[*@_\\#$%!<>]))(?=.*[A-Z]).{8,15})")]],
     cap1Spedizione:['',''],
     indirizzo1Spedizione:['',''],
-    n1Spedizione:['',''] 
+    n1Spedizione:['',''],
+    newsletter1: ['','']
   })
 
   ngOnInit() {
@@ -78,8 +81,10 @@ export class AziendaComponent implements OnInit {
      Valori1.cap1Spedizione = this.form.get("cap1Spedizione").value;
      Valori1.indirizzo1Spedizione = this.form.get("indirizzo1Spedizione").value;
      Valori1.n1Spedizione = this.form.get("n1Spedizione").value;
+     Valori1.newsletter1 = this.newsCheck1;
     
      if(this.rich1.getData(Valori1.email1)!=localStorage.getItem(Valori1.email1)){
+      this.appObj.emailDuplicateError();
       return
     }
 
@@ -88,5 +93,8 @@ export class AziendaComponent implements OnInit {
      this.appObj.registrationComplete();    
    }
 
+   toggleNewsletter1(){
+    this.newsCheck1 = !(this.newsCheck1)
+  }
 
 }

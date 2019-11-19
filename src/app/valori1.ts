@@ -16,4 +16,5 @@ export class valori1 {
     cap1Spedizione: string;
     indirizzo1Spedizione: string;
     n1Spedizione: string;
+    newsletter1: boolean;
 }

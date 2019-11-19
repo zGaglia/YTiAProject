@@ -10,5 +10,6 @@ export class Valori {
     psw:string;
     capSpedizione: string;
     indirizzoSpedizione: string;
-    nSpedizione: string;    
+    nSpedizione: string;
+    newsletter: boolean;    
 }
