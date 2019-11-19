@@ -121,50 +121,7 @@ export class CambiaPasswordComponent implements OnInit {
     }
     
     localStorage.setItem(this.form2.get('email').value, JSON.stringify(localPasswordStorage));
+    this.appObj.passwordChangedBox();
     console.log("Password changed!");
-    this.appObj.toggleEditor('passwordChanged');
-  }
-
-  show1 = false;
-  show2 = false;
-  show3 = false;
-
-  mostra1(){
-    var x = document.getElementById("psw1");
-    this.show1 = !(this.show1)
-    if(this.show1)
-    {
-      x.setAttribute('type', 'text');
-    }
-    else
-    {
-      x.setAttribute('type', 'password');
-    }
-  }
-
-  mostra2(){
-    var x = document.getElementById("psw2");
-    this.show2 = !(this.show2)
-    if(this.show2)
-    {
-      x.setAttribute('type', 'text');
-    }
-    else
-    {
-      x.setAttribute('type', 'password');
-    }
-  }
-
-  mostra3(){
-    var x = document.getElementById("psw3");
-    this.show3 = !(this.show3)
-    if(this.show3)
-    {
-      x.setAttribute('type', 'text');
-    }
-    else
-    {
-      x.setAttribute('type', 'password');
-    }
   }
 }

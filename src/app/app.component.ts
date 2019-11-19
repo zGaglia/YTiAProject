@@ -29,6 +29,7 @@ export class AppComponent {
   showFiller: boolean = false;
   confirmRegistration: boolean = false;
   emailDuplicate: boolean = false;
+  passwordChangedConfirm : boolean = false;
 
   constructor(private router:Router){}
   
@@ -41,7 +42,15 @@ export class AppComponent {
     if(this.emailDuplicate){
       this.emailDuplicate = !(this.emailDuplicate)
     }
+    if(this.passwordChangedConfirm){
+      this.passwordChangedConfirm = !(this.passwordChangedConfirm)
+    }
   }
+
+  passwordChangedBox(){
+    this.passwordChangedConfirm = true;
+  }
+
 
   emailDuplicateError(){
     this.emailDuplicate = true;

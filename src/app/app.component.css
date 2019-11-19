@@ -10,6 +10,17 @@
     transition: 1000ms;
 }
 
+.passwordChangedBox{
+    height: auto; 
+    width: auto;
+    position: absolute;
+    right: 45%;
+    bottom: 0; 
+    background-color: #111; 
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
 .registrationSidenav{
     height: auto; /* 100% Full-height */
     width: auto;

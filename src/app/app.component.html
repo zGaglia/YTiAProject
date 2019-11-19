@@ -34,5 +34,11 @@
         </div>
     </mat-drawer-container>
 
+    <mat-drawer-container class="passwordChangedBox" *ngIf=passwordChangedConfirm [@timedAnimation]=passwordChangedConfirm>
+        <div class="alert alert-success" role="alert">
+            <strong>Great Success!</strong>
+        </div>
+    </mat-drawer-container>
+
 
 </div>
