@@ -3,6 +3,11 @@ import { FormBuilder, Validators, PatternValidator } from '@angular/forms';
 import { RichiestaService } from '../richiesta.service';
 import { trigger, state, transition, style, animate } from '@angular/animations';
 import { AppComponent } from '../app.component';
+import {MatSlideToggleChange} from '@angular/material';
+import {MatPasswordStrengthComponent} from '@angular-material-extensions/password-strength';
+import {ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
+ 
+
 
 @Component({
   selector: 'app-cambia-password',
@@ -17,7 +22,9 @@ import { AppComponent } from '../app.component';
       })),
       transition('void <=> *', animate(1000)),
     ]),
-  ]
+  ],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CambiaPasswordComponent implements OnInit {
 

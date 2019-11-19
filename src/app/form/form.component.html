@@ -1,5 +1,6 @@
 <div class="container" id="privato"  [@transitionTest]=currentState>
     <i class="fas fa-user" id="titolo"><a class="titolo"> Registrazione Privato</a></i>
+    <mat-form-field appearance="outline">
 <form [formGroup]="form1" (ngSubmit)="submit()" class="form">
     <div class="input-group">
         <div class="input-group-prepend">
@@ -118,8 +119,9 @@
                 <i class="fas fa-key"></i>
             </span>
         </div> 
-            <input type="password" formControlName="psw" class="form-control" id="psw" name="psw" title="numero, lettera maiuscola e minuscola,e un simbolo tra (*@_\#$%!<>) almeno 8 caratteri" required placeholder="Password" > 
-            <input type="checkbox" (click)="mostra()">Mostra
+            <input type="password" formControlName="psw" matInput #password
+            [type]="togglePrivatoPass.type" class="form-control" id="psw" name="psw" title="numero, lettera maiuscola e minuscola,e un simbolo tra (*@_\#$%!<>) almeno 8 caratteri" required placeholder="Password" > 
+            <mat-pass-toggle-visibility #togglePrivatoPass></mat-pass-toggle-visibility>
     </div>
             
    
@@ -129,5 +131,6 @@
             <button type="submit" class="btn btn-outline-light" [disabled]="form1.invalid">Registrati</button>
         </div>
     </form>
+</mat-form-field>
 </div>
         

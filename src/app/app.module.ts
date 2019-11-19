@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
@@ -14,7 +14,10 @@ import { CambiaPasswordComponent } from './cambia-password/cambia-password.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfermaCambiaPassComponent } from './conferma-cambia-pass/conferma-cambia-pass.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 const routes: Routes = [
 
   { path: 'privato', component: FormComponent },
@@ -44,6 +47,7 @@ const routes: Routes = [
     FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
+    MatPasswordStrengthModule.forRoot(),
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -51,7 +55,9 @@ const routes: Routes = [
   ],
 
   providers: [RichiestaService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
 
 

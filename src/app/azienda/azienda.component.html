@@ -1,5 +1,6 @@
 <div class="container" id="azienda"  [@transitionTest]=currentState>
     <i class="fas fa-building" id="titolo"><a class="titolo"> Registrazione Azienda</a></i>
+    <mat-form-field appearance="outline">
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="input-group">
             <div class="input-group-prepend">
@@ -103,8 +104,9 @@
                         <i class="fas fa-key"></i>
                     </span>
                 </div>                                       
-                    <input type="password" formControlName="psw" class="form-control" id="psw1" name="psw" title="numero, lettera maiuscola e minuscola,e un simbolo tra (*@_\#$%!<>) almeno 8 caratteri" required placeholder="Password">
-                    <label for="mostra"><input type="checkbox" id="mostra" (click)="mostra1()"> Mostra</label>
+                    <input type="password" formControlName="psw" matInput #password
+                    [type]="toggleAziendaPass.type" class="form-control" id="psw1" name="psw" title="numero, lettera maiuscola e minuscola,e un simbolo tra (*@_\#$%!<>) almeno 8 caratteri" required placeholder="Password">
+                    <mat-pass-toggle-visibility #toggleAziendaPass></mat-pass-toggle-visibility>
             </div>
                                   
                     <label for="newsletter"><input type="checkbox"> Iscriviti alla nostra Newsletter!</label>
@@ -116,4 +118,5 @@
                    
             </div>
     </form>
+</mat-form-field>
 </div>
