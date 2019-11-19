@@ -58,11 +58,11 @@
 }
 
 .example-container i:hover{
-    color: #007bff;
+    color: black;
 }
 
 .example-container p:hover{
-    color: #007bff;
+    color: black;
 }
 
 .root-container{

@@ -50,7 +50,7 @@ export class AziendaComponent implements OnInit {
 
   form = this.fb.group({
     societa:["",[Validators.required]],
-    pIva:["",[Validators.required,Validators.pattern("^\\d{11}$")]],
+    pIva:["",[Validators.required,Validators.pattern("^[a-zA-Z]{2}[0-9]{11}$")]],
     telefono:["",[Validators.required]],
     cap:["",[Validators.required]],
     indirizzo:["",[Validators.required]],
