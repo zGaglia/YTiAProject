@@ -79,4 +79,9 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         font-size: 35px;
         padding-bottom: 35px;
     }
-   
+    .mat-button, .mat-icon-button, .mat-stroked-button {
+        color: inherit;
+        background: transparent;
+        border: 0;
+        }
+       
