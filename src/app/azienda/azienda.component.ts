@@ -79,6 +79,10 @@ export class AziendaComponent implements OnInit {
      Valori1.indirizzo1Spedizione = this.form.get("indirizzo1Spedizione").value;
      Valori1.n1Spedizione = this.form.get("n1Spedizione").value;
     
+     if(this.rich1.getData(Valori1.email1)!=localStorage.getItem(Valori1.email1)){
+      return
+    }
+
      console.log(this.rich1.getData(Valori1.email1))
      this.rich1.postServer1(Valori1);
      this.appObj.registrationComplete();    

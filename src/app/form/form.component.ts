@@ -82,8 +82,9 @@ export class FormComponent implements OnInit {
     valori.indirizzoSpedizione = this.form1.get("indirizzoSpedizione").value;
     valori.nSpedizione = this.form1.get("nSpedizione").value;
 
-   if(this.rich.getData(valori.email)!=null){
-     return
+   if(this.rich.getData(valori.email)!=localStorage.getItem(valori.email)){
+    this.appObj.emailDuplicateError(); 
+    return
    }
     this.rich.postServer(valori);
     this.appObj.registrationComplete();

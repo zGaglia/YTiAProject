@@ -4,7 +4,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 
 
 
-export type EditorType = 'privato' | 'azienda' | 'changepassword' | 'passwordChanged';
+export type EditorType = 'privato' | 'azienda' | 'changepassword';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +28,7 @@ export class AppComponent {
 
   showFiller: boolean = false;
   confirmRegistration: boolean = false;
+  emailDuplicate: boolean = false;
 
   constructor(private router:Router){}
   
@@ -37,6 +38,13 @@ export class AppComponent {
     if(this.confirmRegistration){
       this.confirmRegistration = !(this.confirmRegistration)
     }
+    if(this.emailDuplicate){
+      this.emailDuplicate = !(this.emailDuplicate)
+    }
+  }
+
+  emailDuplicateError(){
+    this.emailDuplicate = true;
   }
 
   toggleSideNav(){

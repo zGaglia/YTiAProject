@@ -28,5 +28,11 @@
         </div>
     </mat-drawer-container>
 
+    <mat-drawer-container class="duplicatedEmailError" *ngIf=emailDuplicate [@timedAnimation]=emailDuplicate>
+        <div class="alert alert-danger" role="alert">
+            <strong>L'email esiste gia!</strong>
+        </div>
+    </mat-drawer-container>
+
 
 </div>

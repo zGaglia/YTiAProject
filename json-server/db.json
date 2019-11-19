@@ -1,8 +1,6 @@
 {
   "employees": [
     {
-  
-    {
       "societa": "jhicsjhds",
       "pIva": "12345678901",
       "telefono1": "38478",
@@ -15,6 +13,51 @@
       "indirizzo1Spedizione": "",
       "n1Spedizione": "",
       "id": "D_Tqv3k"
+    },
+    {
+      "nome": "",
+      "cognome": "",
+      "cf": "",
+      "telefono": "",
+      "cap": "",
+      "indirizzo": "",
+      "n": "",
+      "email": "",
+      "psw": "",
+      "capSpedizione": "",
+      "indirizzoSpedizione": "",
+      "nSpedizione": "",
+      "id": "Qw4jVck"
+    },
+    {
+      "nome": "",
+      "cognome": "",
+      "cf": "",
+      "telefono": "",
+      "cap": "",
+      "indirizzo": "",
+      "n": "",
+      "email": "",
+      "psw": "",
+      "capSpedizione": "",
+      "indirizzoSpedizione": "",
+      "nSpedizione": "",
+      "id": "szdqElp"
+    },
+    {
+      "nome": "",
+      "cognome": "",
+      "cf": "",
+      "telefono": "",
+      "cap": "",
+      "indirizzo": "",
+      "n": "",
+      "email": "",
+      "psw": "",
+      "capSpedizione": "",
+      "indirizzoSpedizione": "",
+      "nSpedizione": "",
+      "id": "cafMYdY"
     }
   ]
 }

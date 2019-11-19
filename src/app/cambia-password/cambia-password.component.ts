@@ -35,10 +35,10 @@ export class CambiaPasswordComponent implements OnInit {
   }
 
   form2 = this.fB.group({
-    email : ['',Validators.required],
-    psw1 : ['',Validators.required] ,
-    psw2 : ['', Validators.pattern("((?=.*\\d)(?=.*[a-z])(?=(.*[*@_\\#$%!<>]))(?=.*[A-Z]).{8,15})")],
-    psw3 : ['', Validators.pattern("((?=.*\\d)(?=.*[a-z])(?=(.*[*@_\\#$%!<>]))(?=.*[A-Z]).{8,15})")]
+    email : [null,Validators.required],
+    psw1 : [null,Validators.required] ,
+    psw2 : [null, Validators.pattern("((?=.*\\d)(?=.*[a-z])(?=(.*[*@_\\#$%!<>]))(?=.*[A-Z]).{8,15})")],
+    psw3 : [null, Validators.pattern("((?=.*\\d)(?=.*[a-z])(?=(.*[*@_\\#$%!<>]))(?=.*[A-Z]).{8,15})")]
   })
 
   
@@ -58,13 +58,13 @@ export class CambiaPasswordComponent implements OnInit {
 
   comparePassNew: boolean = false;
   comparePassEsistente: boolean = false;
-  differentInputs: boolean = false;
+  differentInputs: boolean = true;
 
   comparePass2(){
-    if(this.form2.get('psw2').value){
+    if(this.form2.get('psw2').value != null){
       var newPass = this.form2.get('psw2').value;
     }
-    if(this.form2.get('psw3').value){
+    if(this.form2.get('psw3').value != null){
       var retypePass = this.form2.get('psw3').value;
     }
     if(newPass==retypePass){
@@ -79,16 +79,21 @@ export class CambiaPasswordComponent implements OnInit {
 
 
   verifyIfPassDifferent(){
-    if(this.form2.get('psw1').value){
+    if(this.form2.get('psw1').value != null){
       var oldPassToCheck = this.form2.get('psw1').value;
+      if(this.form2.get('psw2').value != null){
+        var newPassToCheck = this.form2.get('psw2').value;
+      }
     }
-    if(this.form2.get('psw2').value){
-      var newPassToCheck = this.form2.get('psw2').value;
+    if( (oldPassToCheck!=newPassToCheck) && (this.form2.get('psw2') != null))
+    {
+      this.differentInputs = true;
     }
-    else
-    {return true;
+    else{
+      this.differentInputs = false;
     }
-    this.differentInputs = (oldPassToCheck!=newPassToCheck) ? true : false;
+
+    return this.differentInputs;
   }
 
   comparePass1(){
