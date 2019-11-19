@@ -8,90 +8,90 @@
                 <i class="fas fa-user"></i>
             </span>
         </div>
-            <input type="text" formControlName="nome" class="form-control" id="textnome" placeholder="Nome" required>                  
+            <input type="text" formControlName="nome" class="form-control" id="textnome" placeholder="Nome" required>
     </div>
-    
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <i class="fas fa-user"></i>
             </span>
         </div>
-            <input type="text" formControlName="cognome" class="form-control" id="textcognome" placeholder="Cognome" required >                    
+            <input type="text" formControlName="cognome" class="form-control" id="textcognome" placeholder="Cognome" required >
     </div>
-     
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <i class="fas fa-id-card"></i>
             </span>
         </div>
-            <input type="text" formControlName="cf" class="form-control" id="textcodfisc" placeholder="Cod. Fiscale" required>                    
+            <input type="text" formControlName="cf" class="form-control" id="textcodfisc" placeholder="Cod. Fiscale" required>
     </div>
-                    
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <i class="fas fa-phone"></i>
             </span>
         </div>
-            <input type="text" formControlName="telefono" class="form-control" id="texttelefono" placeholder="Telefono" required>                    
+            <input type="text" formControlName="telefono" class="form-control" id="texttelefono" placeholder="Telefono" required>
     </div>
-            
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <b>CAP</b>
             </span>
         </div>
-            <input type="text" formControlName="cap" class="form-control" id="textcap" placeholder="CAP" required>                    
+            <input type="text" formControlName="cap" class="form-control" id="textcap" placeholder="CAP" required>
     </div>
-                
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <i class="fas fa-map-marker-alt"></i>
             </span>
         </div>
-            <input type="text" formControlName="indirizzo" class="form-control" id="textindirizzo" placeholder="Indirizzo" required>               
+            <input type="text" formControlName="indirizzo" class="form-control" id="textindirizzo" placeholder="Indirizzo" required>
     </div>
-                               
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <b>N°</b>
             </span>
         </div>
-            <input type="texts" formControlName="n" class="form-control" id="textnumer" placeholder="" required>                    
+            <input type="texts" formControlName="n" class="form-control" id="textnumer" placeholder="" required>
     </div>
-                               
+
     <div class="input-grou">
-    
+
             <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" (change)="check()" id="customSwitch1" value="true">
                 <label class="custom-control-label" for="customSwitch1">Indirizzo di spedizione diverso da quello di fatturazione?</label>
             </div>
-        
+
     </div>
-                
+
     <div *ngIf="checked"[@transitionTest]=currentState>
-        
+
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="validationTooltipUsernamePrepend">
                         <b>CAP</b>
                     </span>
                 </div>
-            <input type="text" formControlName="capSpedizione" class="form-control" id="textcapS" placeholder="CAP">                    
+            <input type="text" formControlName="capSpedizione" class="form-control" id="textcapS" placeholder="CAP">
             </div>
-                                            
+
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="validationTooltipUsernamePrepend">
                         <i class="fas fa-map-marker-alt"></i>
                     </span>
                 </div>
-                    <input type="text" formControlName="indirizzoSpedizione" class="form-control" id="textindirizzoS" placeholder="Indirizzo Spedizione">                    
+                    <input type="text" formControlName="indirizzoSpedizione" class="form-control" id="textindirizzoS" placeholder="Indirizzo Spedizione">
             </div>
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -99,38 +99,37 @@
                         <b>N°</b>
                     </span>
                 </div>
-                    <input type="text" formControlName="nSpedizione" class="form-control" id="textnumerS" placeholder="">                    
+                    <input type="text" formControlName="nSpedizione" class="form-control" id="textnumerS" placeholder="">
             </div>
-        
+
     </div>
-          
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <i class="fas fa-at"></i>
             </span>
         </div>
-            <input type="email" formControlName="email" class="form-control" id="textemail" placeholder="Email" required>                    
+            <input type="email" formControlName="email" class="form-control" id="textemail" placeholder="Email" required>
     </div>
-        
+
     <div class="input-group">
         <div class="input-group-prepend">
             <span class="input-group-text" id="validationTooltipUsernamePrepend">
                 <i class="fas fa-key"></i>
             </span>
-        </div> 
+        </div>
             <input type="password" formControlName="psw" matInput #password
-            [type]="togglePrivatoPass.type" class="form-control" id="psw" name="psw" title="numero, lettera maiuscola e minuscola,e un simbolo tra (*@_\#$%!<>) almeno 8 caratteri" required placeholder="Password" > 
+            [type]="togglePrivatoPass.type" class="form-control" id="psw" name="psw" title="numero, lettera maiuscola e minuscola,e un simbolo tra (*@_\#$%!<>) almeno 8 caratteri" required placeholder="Password" >
             <mat-pass-toggle-visibility #togglePrivatoPass></mat-pass-toggle-visibility>
     </div>
-            
+
         <label for="newsletter"><input type="checkbox"> Iscriviti alla nostra Newsletter!</label>
-           
+
         <div class="container">
-            <button type="submit" class="btn btn-outline-light" [disabled]="form.invalid">Registrati <i class="fab fa-telegram-plane"></i></button>
+            <button type="submit" class="btn btn-outline-light" [disabled]="form1.invalid">Registrati <i class="fab fa-telegram-plane"></i></button>
         </div>
-        
+
     </form>
 </mat-form-field>
 </div>
-        

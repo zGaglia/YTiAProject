@@ -30,13 +30,13 @@
 
     <mat-drawer-container class="duplicatedEmailError" *ngIf=emailDuplicate [@timedAnimation]=emailDuplicate>
         <div class="alert alert-danger" role="alert">
-            <strong>L'email esiste gia!</strong>
+            <strong>L'email esiste già!</strong>
         </div>
     </mat-drawer-container>
 
     <mat-drawer-container class="passwordChangedBox" *ngIf=passwordChangedConfirm [@timedAnimation]=passwordChangedConfirm>
         <div class="alert alert-success" role="alert">
-            <strong>Great Success!</strong>
+            <strong>Password cambiata!</strong>
         </div>
     </mat-drawer-container>
 
