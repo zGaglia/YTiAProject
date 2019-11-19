@@ -24,12 +24,12 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     font-weight: 400;
     line-height: 1.5;
     color: #ffffff;
-    
+
     white-space: nowrap;
     background-color: #343434;
     border: 1px solid #a1a1a186;
     border-radius: .25rem;
-    
+
     }
 .form-control {
         display: flex;
@@ -51,7 +51,7 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     margin: 4px 0;
     width: 400px;
   }
- 
+
   .btn-outline-primary {
     color: white;
     border-color: white;
@@ -59,15 +59,20 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
     .btn-outline-primary.disabled, .btn-outline-primary:disabled {
         color: white;
         background-color: transparent;
-        
+
     }
     .btn-outline-primary :hover{
         color: white;
-    } 
-    .container{
-        width: 50%;
-        height: 50%;
     }
+    .container{
+        height: 50%;
+        width: 50%;
+    }
+
+    .bottone{
+      height: 50%;
+      width: 50%;
+}
 
     .titolo{
         font-size: 35px;
@@ -84,4 +89,8 @@ body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
         background: transparent;
         border: 0;
         }
-       
+
+    .allerta{
+      font-weight: bold;
+      color: red;
+    }
