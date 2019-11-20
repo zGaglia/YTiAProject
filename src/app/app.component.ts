@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { delay } from 'q';
 
 
 
@@ -52,9 +53,12 @@ export class AppComponent {
   }
 
 
-  emailDuplicateError(){
+  async emailDuplicateError(){
     this.confirmRegistration = false;
     this.emailDuplicate = true;
+    await delay(3000);
+    this.emailDuplicate = false;
+    
   }
 
   toggleSideNav(){
