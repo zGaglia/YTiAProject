@@ -53,6 +53,7 @@ export class AppComponent {
 
 
   emailDuplicateError(){
+    this.confirmRegistration = false;
     this.emailDuplicate = true;
   }
 
@@ -61,7 +62,8 @@ export class AppComponent {
   }
 
   registrationComplete(){
-    this.confirmRegistration = !(this.confirmRegistration)
+    this.emailDuplicate = false;
+    this.confirmRegistration = true;
   }
 
 }
