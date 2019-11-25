@@ -186,6 +186,22 @@
       "nSpedizione": "",
       "newsletter": false,
       "id": "TxzMI2y"
+    },
+    {
+      "nome": "dsfsd",
+      "cognome": "sdf",
+      "cf": "RSSMRA75L01H501A",
+      "telefono": "345345345",
+      "cap": "45",
+      "indirizzo": "dsfvf435",
+      "n": "45",
+      "email": "testing",
+      "psw": "$2a$10$HI7Y0v.2HpZflinOk7ldJuMZi0ZuhQUX1v2rdWGqxu1Ta3ww5TAM2",
+      "capSpedizione": "",
+      "indirizzoSpedizione": "",
+      "nSpedizione": "",
+      "newsletter": true,
+      "id": "97iQZWM"
     }
   ]
 }

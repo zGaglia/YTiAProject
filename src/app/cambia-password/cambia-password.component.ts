@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, PatternValidator } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { RichiestaService } from '../richiesta.service';
 import { trigger, state, transition, style, animate } from '@angular/animations';
 import { AppComponent } from '../app.component';
-import {MatSlideToggleChange} from '@angular/material';
-import {MatPasswordStrengthComponent} from '@angular-material-extensions/password-strength';
 import {ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
- 
-
+import bcrypt from 'bcryptjs';
 
 @Component({
   selector: 'app-cambia-password',
@@ -95,17 +92,20 @@ export class CambiaPasswordComponent implements OnInit {
 
     return this.differentInputs;
   }
+  
 
   comparePass1(){
     var oldPass = this.prendiPassEsistente();
     if(this.form2.get('psw1').value){
       var insertedPass = this.form2.get('psw1').value;
     }
-    if(oldPass==insertedPass)
+    if(oldPass && insertedPass)
     {
-      this.comparePassEsistente = true;
-    }else{
-      this.comparePassEsistente = false;
+      if(bcrypt.compareSync(insertedPass, oldPass)){
+        this.comparePassEsistente = true;
+      }else{
+        this.comparePassEsistente = false;
+      }
     }
     return this.comparePassEsistente;//return true if passwords are the same
   }
@@ -113,15 +113,17 @@ export class CambiaPasswordComponent implements OnInit {
   cambiaPassword(){
     var localPasswordStorage = JSON.parse(localStorage.getItem(this.form2.get('email').value) );
     if(localPasswordStorage.psw != null){
-      localPasswordStorage.psw = this.form2.get('psw2').value;
+      localPasswordStorage.psw = bcrypt.hashSync(this.form2.get('psw2').value, 10);
     }
     else
     {
-      localPasswordStorage.psw1 = this.form2.get('psw2').value;
+      localPasswordStorage.psw1 = bcrypt.hashSync(this.form2.get('psw2').value, 10);
     }
     
     localStorage.setItem(this.form2.get('email').value, JSON.stringify(localPasswordStorage));
     this.appObj.passwordChangedBox();
+
     console.log("Password changed!");
   }
+  
 }

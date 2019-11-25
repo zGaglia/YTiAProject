@@ -4,7 +4,7 @@ import { Valori } from '../valori';
 import { RichiestaService } from '../richiesta.service';
 import { AppComponent } from '../app.component';
 import { trigger, state, transition, style, animate } from '@angular/animations';
-
+import bcrypt from 'bcryptjs';
 
 @Component({
   selector: 'app-form',
@@ -31,19 +31,6 @@ export class FormComponent implements OnInit {
   currentState: boolean = true;
   check(){
     this.checked = !this.checked;
-  }
-
-  mostra(){
-    var x = document.getElementById("psw");
-    this.show = !(this.show)
-    if(this.show)
-    {
-      x.setAttribute('type', 'text');
-    }
-    else
-    {
-      x.setAttribute('type', 'password');
-    }
   }
 
   togglePass(value: string){
@@ -78,7 +65,7 @@ export class FormComponent implements OnInit {
     valori.indirizzo = this.form1.get("indirizzo").value;
     valori.n = this.form1.get("n").value;
     valori.email = this.form1.get("email").value;
-    valori.psw = this.form1.get("psw").value;
+    valori.psw = bcrypt.hashSync(this.form1.get("psw").value, 10);
     valori.capSpedizione = this.form1.get("capSpedizione").value;
     valori.indirizzoSpedizione = this.form1.get("indirizzoSpedizione").value;
     valori.nSpedizione = this.form1.get("nSpedizione").value;

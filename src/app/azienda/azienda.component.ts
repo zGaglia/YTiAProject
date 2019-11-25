@@ -4,6 +4,7 @@ import { valori1 } from '../valori1';
 import { RichiestaService } from '../richiesta.service';
 import { AppComponent } from '../app.component';
 import { trigger, state, transition, style, animate } from '@angular/animations';
+import bcrypt from 'bcryptjs';
 
 @Component({
   selector: 'app-azienda',
@@ -67,7 +68,7 @@ export class AziendaComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
   submit(){
     var Valori1 = new valori1();
      Valori1.societa = this.form.get("societa").value;
@@ -77,7 +78,7 @@ export class AziendaComponent implements OnInit {
      Valori1.indirizzo1 = this.form.get("indirizzo").value;
      Valori1.n1 = this.form.get("n").value;
      Valori1.email1 = this.form.get("email").value;
-     Valori1.psw1 = this.form.get("psw").value;
+     Valori1.psw1 = bcrypt.hashSync(this.form.get("psw").value, 10);
      Valori1.cap1Spedizione = this.form.get("cap1Spedizione").value;
      Valori1.indirizzo1Spedizione = this.form.get("indirizzo1Spedizione").value;
      Valori1.n1Spedizione = this.form.get("n1Spedizione").value;

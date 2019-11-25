@@ -65,9 +65,11 @@ export class AppComponent {
     this.showFiller = !(this.showFiller)
   }
 
-  registrationComplete(){
+  async registrationComplete(){
     this.emailDuplicate = false;
     this.confirmRegistration = true;
+    await delay(4000);
+    this.confirmRegistration = false;
   }
 
 }
