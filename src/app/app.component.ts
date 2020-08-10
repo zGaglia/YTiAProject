@@ -48,8 +48,10 @@ export class AppComponent {
     }
   }
 
-  passwordChangedBox(){
+  async passwordChangedBox(){
     this.passwordChangedConfirm = true;
+    await delay(5000);
+    this.passwordChangedConfirm = false;
   }
 
 

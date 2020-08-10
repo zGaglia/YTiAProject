@@ -203,5 +203,49 @@
       "newsletter": true,
       "id": "97iQZWM"
     }
+  ],
+  "test": [
+    {
+      "nome": "test",
+      "cognome": "testing",
+      "cf": "RSSMRA75L01H501A",
+      "telefono": "9485384039",
+      "cap": "nvr9",
+      "indirizzo": "no-si-no",
+      "n": "54",
+      "email": "breakingBad",
+      "psw": "$2a$10$CUKdlwoqNq98M31dSmTN5uBKkJ.Lriq1pacGKBiHKWvtnDlli/nGm",
+      "capSpedizione": "",
+      "indirizzoSpedizione": "",
+      "nSpedizione": "",
+      "newsletter": false,
+      "id": 1
+    },
+    {
+      "societa": "soc",
+      "pIva": "TR45444444444",
+      "telefono1": "40385304593",
+      "cap1": "mi",
+      "indirizzo1": "ncudu",
+      "n1": "9",
+      "email1": "mailAzienda",
+      "psw1": "$2a$10$cmXoe26e9cZCi.RQEFTuIuqE2EK.T4R6HEihx6oI8i7/Hi1eJur2a",
+      "cap1Spedizione": "",
+      "indirizzo1Spedizione": "",
+      "n1Spedizione": "",
+      "newsletter1": false,
+      "id": 2
+    },
+    {
+      "username": "johnny",
+      "password": "bravo",
+      "id": 3
+    },
+    {
+      "username": "uhuh",
+      "password": "bravo",
+      "profile": "standard",
+      "id": 4
+    }
   ]
 }

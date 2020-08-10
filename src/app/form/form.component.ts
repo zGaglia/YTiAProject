@@ -66,9 +66,11 @@ export class FormComponent implements OnInit {
     valori.n = this.form1.get("n").value;
     valori.email = this.form1.get("email").value;
     valori.psw = bcrypt.hashSync(this.form1.get("psw").value, 10);
-    valori.capSpedizione = this.form1.get("capSpedizione").value;
-    valori.indirizzoSpedizione = this.form1.get("indirizzoSpedizione").value;
-    valori.nSpedizione = this.form1.get("nSpedizione").value;
+    if (this.checked){
+      valori.capSpedizione = this.form1.get("capSpedizione").value;
+      valori.indirizzoSpedizione = this.form1.get("indirizzoSpedizione").value;
+      valori.nSpedizione = this.form1.get("nSpedizione").value;
+    }
     valori.newsletter = this.newsCheck;
 
    if(this.rich.getData(valori.email)!=localStorage.getItem(valori.email)){

@@ -17,19 +17,21 @@ const httpOptions = {
 })
 
 export class RichiestaService {
-  ApiUrl = 'http://localhost:3000/employees';  
+  
   
 
   constructor(private http: HttpClient) {
     
   }
   postServer(val:Valori){
-    this.http.post<Valori>(this.ApiUrl, val).subscribe();
+    var ApiUrl = 'http://localhost:3000/test';  
+    this.http.post<Valori>(ApiUrl, val).subscribe();
     localStorage.setItem(val.email,JSON.stringify(val))
   }
 
   postServer1(val1:valori1){
-    this.http.post<valori1>(this.ApiUrl, val1).subscribe();
+    var ApiUrl = 'http://localhost:3000/test';  
+    this.http.post<valori1>(ApiUrl, val1).subscribe();
     localStorage.setItem(val1.email1,JSON.stringify(val1))
   }
  
